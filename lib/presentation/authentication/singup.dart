@@ -13,46 +13,43 @@ class SignUp extends StatefulWidget {
 class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: const Color(0xFF55CDF3),
-        body: NestedScrollView(
-          headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
-            return <Widget>[
-              const SliverAppBar(
-                expandedHeight: 200.0,
-                floating: false,
-                pinned: true,
-                flexibleSpace: FlexibleSpaceBar(
-                  title: Text(
-                    'Sign up',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 24,
-                      fontFamily: 'jost',
-                      fontWeight: FontWeight.bold,
-                    ),
+    return Scaffold(
+      backgroundColor: const Color(0xFF55CDF3),
+      body: CustomScrollView(
+        slivers: [
+          SliverAppBar(
+            pinned: true,
+            expandedHeight: 200,
+            backgroundColor: Colors.grey[400],
+            flexibleSpace: FlexibleSpaceBar(
+              titlePadding: const EdgeInsets.symmetric(horizontal: 20.0),
+              title: const Text(
+                'Sign up',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 40,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              background: Container(
+                decoration: const BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      Colors.white,
+                      Color(0xFFDFF7FF),
+                      Color(0xFF55CDF3),
+                    ],
+                    stops: [0.4, 0.6, 1.0],
                   ),
-                  centerTitle: false,
                 ),
               ),
-            ];
-          },
-          body: SingleChildScrollView(
+            ),
+          ),
+          SliverToBoxAdapter(
             child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 56, vertical: 16),
-              decoration: const BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [
-                    Colors.white,
-                    Color(0xFFDFF7FF),
-                    Color(0xFF55CDF3),
-                  ],
-                  stops: [0.06, 0.2, 1.0], // Adjust stops for smooth blending
-                ),
-              ),
+              padding: const EdgeInsets.symmetric(horizontal: 56, vertical: 80),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -174,7 +171,7 @@ class _SignUpState extends State<SignUp> {
               ),
             ),
           ),
-        ),
+        ],
       ),
     );
   }
