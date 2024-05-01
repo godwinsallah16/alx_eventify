@@ -15,7 +15,7 @@ class Login extends StatelessWidget {
           SliverAppBar(
             pinned: true,
             expandedHeight: 200,
-            backgroundColor: Colors.transparent,
+            backgroundColor: Colors.white,
             flexibleSpace: FlexibleSpaceBar(
               titlePadding: const EdgeInsets.symmetric(horizontal: 20.0),
               title: const Text(
