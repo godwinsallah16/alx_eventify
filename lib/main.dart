@@ -1,14 +1,15 @@
-import 'package:eventify/presentation/authentication/login.dart';
+import 'package:eventify/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 
 import 'core/network/network_info.dart';
+import 'core/utils/screen_navigator.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +30,9 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Login(),
+      navigatorKey: NavigatorService.navigatorKey,
+      initialRoute: AppRoutes.initialRoute,
+      routes: AppRoutes.routes,
     );
   }
 }

@@ -2,14 +2,16 @@ import 'package:eventify/widgets/buttons/button_primary.dart';
 import 'package:eventify/widgets/buttons/buutton_secondary.dart';
 import 'package:flutter/material.dart';
 
-class SignUpLogin extends StatefulWidget {
-  const SignUpLogin({super.key});
+import '../../core/utils/screen_navigator.dart';
+import '../../routes/app_routes.dart';
 
-  @override
-  State<SignUpLogin> createState() => _SignUpLoginState();
-}
+class AuthInit extends StatelessWidget {
+  const AuthInit({super.key});
 
-class _SignUpLoginState extends State<SignUpLogin> {
+  static Widget builder(BuildContext context) {
+    return const AuthInit();
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -27,10 +29,10 @@ class _SignUpLoginState extends State<SignUpLogin> {
             stops: [0.19, 0.46, 1.0], // Adjust stops for smooth blending
           ),
         ),
-        child: const Column(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Column(
+            const Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
@@ -57,8 +59,21 @@ class _SignUpLoginState extends State<SignUpLogin> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                ButtonPrimary(buttonText: "Login"),
-                ButtonSecondary(buttonText: "Sign up"),
+                ButtonPrimary(
+                  buttonText: "Login",
+                  onTap: () {
+                    NavigatorService.pushNamedAndRemoveUntil(
+                        AppRoutes.loginScreen);
+                  },
+                ),
+                ButtonSecondary(
+                  buttonText: "Sign up",
+                  onTap: () {
+                    NavigatorService.pushNamedAndRemoveUntil(
+                        AppRoutes.signupScreen);
+                    print("worked");
+                  },
+                ),
               ],
             )
           ],

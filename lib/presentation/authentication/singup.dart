@@ -1,17 +1,21 @@
+import 'package:eventify/core/utils/image_constants.dart';
 import 'package:eventify/widgets/background/auth.dart';
 import 'package:eventify/widgets/buttons/buutton_secondary.dart';
+import 'package:eventify/widgets/buttons/icon_button.dart';
 import 'package:eventify/widgets/textfield/email_textfield.dart';
 import 'package:eventify/widgets/textfield/psswordfeild.dart';
 import 'package:flutter/material.dart';
 
-class SignUp extends StatefulWidget {
-  const SignUp({super.key});
+import '../../core/utils/screen_navigator.dart';
+import '../../routes/app_routes.dart';
 
-  @override
-  State<SignUp> createState() => _SignUpState();
-}
+class SignUpScreen extends StatelessWidget {
+  const SignUpScreen({super.key});
 
-class _SignUpState extends State<SignUp> {
+  static Widget builder(BuildContext context) {
+    return const SignUpScreen();
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -54,8 +58,14 @@ class _SignUpState extends State<SignUp> {
                     const SizedBox(height: 4),
                     const PasswordField(fieldLabel: "Confirm Password"),
                     const SizedBox(height: 32),
-                    const Center(
-                      child: ButtonSecondary(buttonText: "Sign up"),
+                    Center(
+                      child: ButtonSecondary(
+                        onTap: () {
+                          NavigatorService.popAndPushNamed(
+                              AppRoutes.loginScreen);
+                        },
+                        buttonText: "Sign up",
+                      ),
                     ),
                     const SizedBox(height: 32),
                     const Center(
@@ -101,32 +111,26 @@ class _SignUpState extends State<SignUp> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        IconButton(
-                          iconSize: 24,
-                          onPressed: () {
-                            print("object");
+                        CustomIconButton(
+                          onTap: () {
+                            NavigatorService.popAndPushNamed(
+                                AppRoutes.loginScreen);
                           },
-                          icon: Image.asset(
-                            "assets/icons/google_icon.png",
-                          ),
+                          child: ImageConstant.googleIcon,
                         ),
-                        IconButton(
-                          iconSize: 24,
-                          onPressed: () {
-                            print("object");
+                        CustomIconButton(
+                          onTap: () {
+                            NavigatorService.popAndPushNamed(
+                                AppRoutes.loginScreen);
                           },
-                          icon: Image.asset(
-                            "assets/icons/github_icon.png",
-                          ),
+                          child: ImageConstant.githubIcon,
                         ),
-                        IconButton(
-                          iconSize: 24,
-                          onPressed: () {
-                            print("object");
+                        CustomIconButton(
+                          onTap: () {
+                            NavigatorService.popAndPushNamed(
+                                AppRoutes.loginScreen);
                           },
-                          icon: Image.asset(
-                            "assets/icons/facebook_icon.png",
-                          ),
+                          child: ImageConstant.facebookIcon,
                         ),
                         // Add more IconButton widgets as needed
                       ],

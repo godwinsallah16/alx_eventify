@@ -2,13 +2,15 @@ import 'package:flutter/material.dart';
 
 class ButtonPrimary extends StatelessWidget {
   final String buttonText;
+  final VoidCallback onTap;
 
-  const ButtonPrimary({super.key, required this.buttonText});
+  const ButtonPrimary(
+      {super.key, required this.buttonText, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 150,
+      width: 120,
       height: 48,
       child: ElevatedButton(
         style: ButtonStyle(
@@ -28,9 +30,7 @@ class ButtonPrimary extends StatelessWidget {
           elevation: MaterialStateProperty.all(5), // Add elevation for shadow
           shadowColor: MaterialStateProperty.all(Colors.black), // Shadow color
         ),
-        onPressed: () {
-          print("object");
-        },
+        onPressed: onTap,
         child: Text(
           buttonText,
           style: const TextStyle(

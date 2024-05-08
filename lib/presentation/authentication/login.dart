@@ -1,3 +1,5 @@
+import 'package:eventify/core/utils/screen_navigator.dart';
+import 'package:eventify/routes/app_routes.dart';
 import 'package:eventify/widgets/background/auth.dart';
 import 'package:eventify/widgets/buttons/button_primary.dart';
 import 'package:eventify/widgets/textfield/email_textfield.dart';
@@ -7,8 +9,12 @@ import 'package:flutter/material.dart';
 import '../../core/utils/image_constants.dart';
 import '../../widgets/buttons/icon_button.dart';
 
-class Login extends StatelessWidget {
-  const Login({super.key});
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
+
+  static Widget builder(BuildContext context) {
+    return const LoginScreen();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -66,8 +72,13 @@ class Login extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 32),
-                    const Center(
-                      child: ButtonPrimary(buttonText: "Login"),
+                    Center(
+                      child: ButtonPrimary(
+                        buttonText: "Login",
+                        onTap: () {
+                          NavigatorService.pushNamed(AppRoutes.signupScreen);
+                        },
+                      ),
                     ),
                     const SizedBox(height: 32),
                     const Center(
@@ -117,25 +128,19 @@ class Login extends StatelessWidget {
                           onTap: () {
                             print("D");
                           },
-                          child: Image.asset(
-                            ImageConstant.googleIcon,
-                          ),
+                          child: ImageConstant.googleIcon,
                         ),
                         CustomIconButton(
                           onTap: () {
                             print("D");
                           },
-                          child: Image.asset(
-                            ImageConstant.githubIcon,
-                          ),
+                          child: ImageConstant.githubIcon,
                         ),
                         CustomIconButton(
                           onTap: () {
                             print("D");
                           },
-                          child: Image.asset(
-                            ImageConstant.facebookIcon,
-                          ),
+                          child: ImageConstant.facebookIcon,
                         ),
                       ],
                     ),
