@@ -4,8 +4,7 @@ class PasswordField extends StatefulWidget {
   final String fieldLabel;
   final String? hintText; // Make hint message optional
 
-  const PasswordField({Key? key, required this.fieldLabel, this.hintText})
-      : super(key: key);
+  const PasswordField({super.key, required this.fieldLabel, this.hintText});
 
   @override
   State<PasswordField> createState() => _PasswordFieldState();
