@@ -62,15 +62,13 @@ class AuthInit extends StatelessWidget {
                 ButtonPrimary(
                   buttonText: "Login",
                   onTap: () {
-                    NavigatorService.pushNamedAndRemoveUntil(
-                        AppRoutes.loginScreen);
+                    NavigatorService.pushNamed(AppRoutes.loginScreen);
                   },
                 ),
                 ButtonSecondary(
                   buttonText: "Sign up",
                   onTap: () {
-                    NavigatorService.pushNamedAndRemoveUntil(
-                        AppRoutes.signupScreen);
+                    NavigatorService.pushNamed(AppRoutes.signupScreen);
                   },
                 ),
               ],
