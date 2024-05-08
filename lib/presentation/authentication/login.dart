@@ -157,7 +157,8 @@ class LoginScreen extends StatelessWidget {
                         ),
                         TextButton(
                           onPressed: () {
-                            print("dfs");
+                            NavigatorService.popAndPushNamed(
+                                AppRoutes.signupScreen);
                           },
                           child: const Text(
                             "Sign up",

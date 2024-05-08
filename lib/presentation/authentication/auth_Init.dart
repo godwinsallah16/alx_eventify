@@ -71,7 +71,6 @@ class AuthInit extends StatelessWidget {
                   onTap: () {
                     NavigatorService.pushNamedAndRemoveUntil(
                         AppRoutes.signupScreen);
-                    print("worked");
                   },
                 ),
               ],
