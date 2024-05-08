@@ -152,7 +152,7 @@ class LoginScreen extends StatelessWidget {
                           "Don't have an account?",
                           style: TextStyle(
                             color: Colors.black,
-                            fontSize: 14,
+                            fontSize: 16,
                           ),
                         ),
                         TextButton(

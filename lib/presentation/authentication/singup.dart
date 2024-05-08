@@ -143,7 +143,7 @@ class SignUpScreen extends StatelessWidget {
                           "Already have an account?",
                           style: TextStyle(
                             color: Colors.black,
-                            fontSize: 14,
+                            fontSize: 16,
                           ),
                         ),
                         TextButton(
