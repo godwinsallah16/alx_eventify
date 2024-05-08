@@ -4,6 +4,9 @@ import 'package:eventify/widgets/textfield/email_textfield.dart';
 import 'package:eventify/widgets/textfield/psswordfeild.dart';
 import 'package:flutter/material.dart';
 
+import '../../core/utils/image_constants.dart';
+import '../../widgets/buttons/icon_button.dart';
+
 class Login extends StatelessWidget {
   const Login({super.key});
 
@@ -110,31 +113,28 @@ class Login extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        IconButton(
-                          iconSize: 40,
-                          onPressed: () {
-                            print("object");
+                        CustomIconButton(
+                          onTap: () {
+                            print("D");
                           },
-                          icon: Image.asset(
-                            "assets/icons/Google_button.png",
+                          child: Image.asset(
+                            ImageConstant.googleIcon,
                           ),
                         ),
-                        IconButton(
-                          iconSize: 40,
-                          onPressed: () {
-                            print("object");
+                        CustomIconButton(
+                          onTap: () {
+                            print("D");
                           },
-                          icon: Image.asset(
-                            "assets/icons/Github_button.png",
+                          child: Image.asset(
+                            ImageConstant.githubIcon,
                           ),
                         ),
-                        IconButton(
-                          iconSize: 40,
-                          onPressed: () {
-                            print("object");
+                        CustomIconButton(
+                          onTap: () {
+                            print("D");
                           },
-                          icon: Image.asset(
-                            "assets/icons/Facebook_button.png",
+                          child: Image.asset(
+                            ImageConstant.facebookIcon,
                           ),
                         ),
                       ],

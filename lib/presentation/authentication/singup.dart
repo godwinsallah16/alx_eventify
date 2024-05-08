@@ -107,7 +107,7 @@ class _SignUpState extends State<SignUp> {
                             print("object");
                           },
                           icon: Image.asset(
-                            "assets/icons/Google_button.png",
+                            "assets/icons/google_icon.png",
                           ),
                         ),
                         IconButton(
@@ -116,7 +116,7 @@ class _SignUpState extends State<SignUp> {
                             print("object");
                           },
                           icon: Image.asset(
-                            "assets/icons/Github_button.png",
+                            "assets/icons/github_icon.png",
                           ),
                         ),
                         IconButton(
@@ -125,7 +125,7 @@ class _SignUpState extends State<SignUp> {
                             print("object");
                           },
                           icon: Image.asset(
-                            "assets/icons/Facebook_button.png",
+                            "assets/icons/facebook_icon.png",
                           ),
                         ),
                         // Add more IconButton widgets as needed

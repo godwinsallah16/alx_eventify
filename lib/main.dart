@@ -1,8 +1,19 @@
 import 'package:eventify/presentation/authentication/login.dart';
 import 'package:flutter/material.dart';
 
+import 'core/network/network_info.dart';
+
 void main() {
   runApp(const MyApp());
+  final connectivityService = ConnectivityService();
+
+  // Initialize the service
+  connectivityService.initialize();
+  Future.delayed(const Duration(seconds: 5), () {
+    print('Is connected: ${connectivityService.isConnected}');
+    print(
+        'Has internet connection: ${connectivityService.hasInternetConnection}');
+  });
 }
 
 class MyApp extends StatelessWidget {
