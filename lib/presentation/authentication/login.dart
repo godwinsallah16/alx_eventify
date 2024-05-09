@@ -77,7 +77,8 @@ class LoginScreen extends StatelessWidget {
                       child: ButtonPrimary(
                         buttonText: "Login",
                         onTap: () {
-                          NavigatorService.pushNamed(AppRoutes.signupScreen);
+                          NavigatorService.pushNamedAndRemoveUntil(
+                              AppRoutes.signupScreen);
                         },
                       ),
                     ),
