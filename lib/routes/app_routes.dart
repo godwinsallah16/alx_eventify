@@ -1,4 +1,4 @@
-import 'package:eventify/presentation/authentication/auth_Init.dart';
+import 'package:eventify/presentation/authentication/auth_init.dart';
 import 'package:eventify/presentation/authentication/login.dart';
 import 'package:eventify/presentation/authentication/singup.dart';
 import 'package:flutter/material.dart';

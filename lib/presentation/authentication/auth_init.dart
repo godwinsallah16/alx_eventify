@@ -1,9 +1,8 @@
+import 'package:eventify/core/utils/screen_navigator.dart';
+import 'package:eventify/routes/app_routes.dart';
 import 'package:eventify/widgets/buttons/button_primary.dart';
-import 'package:eventify/widgets/buttons/buutton_secondary.dart';
+import 'package:eventify/widgets/buttons/button_secondary.dart';
 import 'package:flutter/material.dart';
-
-import '../../core/utils/screen_navigator.dart';
-import '../../routes/app_routes.dart';
 
 class AuthInit extends StatelessWidget {
   const AuthInit({super.key});
