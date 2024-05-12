@@ -1,6 +1,6 @@
 import 'package:eventify/core/utils/image_constants.dart';
 import 'package:eventify/widgets/background/auth.dart';
-import 'package:eventify/widgets/buttons/buutton_secondary.dart';
+import 'package:eventify/widgets/buttons/button_secondary.dart';
 import 'package:eventify/widgets/buttons/icon_button.dart';
 import 'package:eventify/widgets/textfield/email_textfield.dart';
 import 'package:eventify/widgets/textfield/psswordfeild.dart';
